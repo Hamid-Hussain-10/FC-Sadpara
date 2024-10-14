@@ -1,0 +1,107 @@
+.header {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a0135;
+  padding: 0.5rem;
+  color: white;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 13vh;
+  width: 6vw;
+  margin-left: 3rem;
+  cursor: pointer;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  margin-right: 3rem;
+  font-family: "Teko", sans-serif;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.nav ul li a:hover{
+  color: #f39c12;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  margin-right: 2rem;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 1;
+  right: -100%;
+  width: 70px;
+  height: 30%;
+  background-color: #7b8123;
+  color: #ffffff;
+  padding: 1rem;
+  border-radius: 0rem 1rem 1rem 1rem;
+  transition: right 0.3s ease;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 10px;
+}
+
+.sidebar ul li {
+  margin-bottom: 1rem;
+  font-family: "Teko", sans-serif;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .logo img{
+    height: 8vh;
+    width: 12vw;
+  }
+  .nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+.sidebar ul li a:hover {
+  color: #f39c12;
+}
